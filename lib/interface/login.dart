@@ -28,28 +28,40 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const SizedBox(height: 100.0),
-              Text(
-                "Login",
+              Text("Inicio de Sesión",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
               ),
               const SizedBox(height: 20.0),
               TextField(
                 controller: _emailController,
-                decoration: InputDecoration(hintText: "Enter email"),
+                
+                decoration: InputDecoration(
+                  hintText: "Ingrese su email",
+                  prefixIcon: Icon(Icons.mail),
+                  border: OutlineInputBorder(
+                             borderRadius: BorderRadius.circular(10),
+                  )
+                ),
               ),
-              const SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
               TextField(
                 controller: _passwordController,
                 obscureText: true,
-                decoration: InputDecoration(hintText: "Enter password"),
+                decoration: InputDecoration(
+                  hintText: "Ingrese su contraseña",
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(
+                             borderRadius: BorderRadius.circular(10),
+                  )
+                ),
               ),
-              const SizedBox(height: 10.0),
+              const SizedBox(height: 15.0),
               RaisedButton(
-                child: Text("Login"),
+                child: Text("Iniciar Sesión"),
                 onPressed: () async {
                   if (_emailController.text.isEmpty ||
                       _passwordController.text.isEmpty) {
-                    print("Email and password cannot be empty");
+                    print("El email y password no pueden estar vacíos");
                     return;
                   }
                   try {
@@ -57,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                         email: _emailController.text,
                         password: _passwordController.text);
                     if (user != null) {
-                      print("login successful");
+                      print("Inicio de Sesión Exitoso");
                     }
                   } catch (e) {
                     print(e);
@@ -65,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
               RaisedButton(
-                child: Text("Create Account"),
+                child: Text("Crear Cuenta"),
                 onPressed: () async {
                   Navigator.push(
                       context,

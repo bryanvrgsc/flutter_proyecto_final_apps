@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('Página User'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Text("Home page"),
             RaisedButton(
-              child: Text("Log out"),
+              child: Text("Cerrar Sesión"),
               onPressed: () {
                 AuthHelper.logOut();
               },
