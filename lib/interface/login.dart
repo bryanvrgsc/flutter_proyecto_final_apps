@@ -34,12 +34,11 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20.0),
               TextField(
                 controller: _emailController,
-                
                 decoration: InputDecoration(
                   hintText: "Ingrese su email",
                   prefixIcon: Icon(Icons.mail),
                   border: OutlineInputBorder(
-                             borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                   )
                 ),
               ),
@@ -51,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: "Ingrese su contraseña",
                   prefixIcon: Icon(Icons.lock),
                   border: OutlineInputBorder(
-                             borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                   )
                 ),
               ),
@@ -63,8 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                       _passwordController.text.isEmpty) {
                     print("El email y password no pueden estar vacíos");
                     return;
-                  }
-                  try {
+                  } try {
                     final user = await AuthHelper.signInWithEmail(
                         email: _emailController.text,
                         password: _passwordController.text);
@@ -80,10 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text("Crear Cuenta"),
                 onPressed: () async {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => SignupPage(),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => SignupPage(),
+                    ));
                 },
               )
             ],
