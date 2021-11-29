@@ -1,7 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:proyecto_final_apps/interface/home.dart';
+import 'package:proyecto_final_apps/interface/home_admin.dart';
+
+import 'package:proyecto_final_apps/interface/home_user.dart';
 import 'package:proyecto_final_apps/interface/login.dart';
+import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -15,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -31,7 +36,24 @@ class MainScreen extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if(snapshot.hasData && snapshot.data != null) {
-          return HomePage();
+          UserHelper.saveUser(snapshot.data!);
+          return StreamBuilder<DocumentSnapshot>(
+            stream: FirebaseFirestore.instance.collection("users").doc(snapshot.data!.uid).snapshots() ,
+            builder: (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot){
+              if(snapshot.hasData && snapshot.data != null) {
+                Map<String, dynamic> user = snapshot.data!.data() as Map<String, dynamic>;
+                if(user['role'] == 'admin') {
+                  return AdminHomePage();
+                }else{
+                  return HomePage();
+                }
+              }else{
+                return Material(
+                  child: Center(child: CircularProgressIndicator(),),
+                );
+              }
+            },
+          );
         }
         return LoginPage();
       }
