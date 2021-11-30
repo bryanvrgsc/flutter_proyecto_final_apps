@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'navegacioninicio.dart';
 
-void main() {
+void main() async {
   runApp(navegacioninicio());
 }

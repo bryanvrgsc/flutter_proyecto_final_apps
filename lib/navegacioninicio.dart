@@ -12,7 +12,7 @@ class navegacioninicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'navegación drawer',
+      title: 'Navegación drawer',
       home: login(),
       routes: {
         rutas.rutalogin: (context) => login(),
