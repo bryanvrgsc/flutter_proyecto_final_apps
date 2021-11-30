@@ -1,8 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:proyecto_final_apps/navigationDrawer.dart';
 import 'package:proyecto_final_apps/interface/signup.dart';
+import 'package:proyecto_final_apps/navigationDrawer.dart';
 import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
+  static const String nombreruta = '/login';
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -21,6 +25,10 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Login'),
+      ),
+      drawer: navigationDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -28,31 +36,30 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const SizedBox(height: 100.0),
-              Text("Inicio de Sesión",
+              Text(
+                "Inicio de Sesión",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
               ),
               const SizedBox(height: 20.0),
               TextField(
                 controller: _emailController,
                 decoration: InputDecoration(
-                  hintText: "Ingrese su email",
-                  prefixIcon: Icon(Icons.mail),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  )
-                ),
+                    hintText: "Ingrese su email",
+                    prefixIcon: Icon(Icons.mail),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    )),
               ),
               const SizedBox(height: 15.0),
               TextField(
                 controller: _passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: "Ingrese su contraseña",
-                  prefixIcon: Icon(Icons.lock),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  )
-                ),
+                    hintText: "Ingrese su contraseña",
+                    prefixIcon: Icon(Icons.lock),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    )),
               ),
               const SizedBox(height: 15.0),
               RaisedButton(
@@ -62,7 +69,8 @@ class _LoginPageState extends State<LoginPage> {
                       _passwordController.text.isEmpty) {
                     print("El email y password no pueden estar vacíos");
                     return;
-                  } try {
+                  }
+                  try {
                     final user = await AuthHelper.signInWithEmail(
                         email: _emailController.text,
                         password: _passwordController.text);
@@ -72,16 +80,6 @@ class _LoginPageState extends State<LoginPage> {
                   } catch (e) {
                     print(e);
                   }
-                },
-              ),
-              RaisedButton(
-                child: Text("Crear Cuenta"),
-                onPressed: () async {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => SignupPage(),
-                    ));
                 },
               )
             ],

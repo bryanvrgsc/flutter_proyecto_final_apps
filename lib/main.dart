@@ -1,10 +1,16 @@
+import 'dart:ui';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:proyecto_final_apps/interface/home_admin.dart';
-
 import 'package:proyecto_final_apps/interface/home_user.dart';
+
+import 'package:proyecto_final_apps/rutas.dart';
 import 'package:proyecto_final_apps/interface/login.dart';
+import 'package:proyecto_final_apps/interface/signup.dart';
+import 'package:proyecto_final_apps/interface/contacto.dart';
+import 'package:proyecto_final_apps/interface/feedback.dart';
+
 import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -21,10 +27,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      home: MainScreen(),
+      routes: {
+        rutas.rutalogin: (context) => MainScreen(),
+        rutas.rutasignup: (context) => SignupPage(),
+        rutas.rutacontacto: (context) => contacto(),
+        rutas.rutafeedback: (context) => feedback(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainScreen(),
     );
   }
 }

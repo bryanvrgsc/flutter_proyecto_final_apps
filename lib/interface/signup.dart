@@ -1,7 +1,9 @@
+import 'package:proyecto_final_apps/navigationDrawer.dart';
 import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatefulWidget {
+  static const String nombreruta = '/signup';
   @override
   _SignupPageState createState() => _SignupPageState();
 }
@@ -22,6 +24,10 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Signup'),
+      ),
+      drawer: navigationDrawer(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
