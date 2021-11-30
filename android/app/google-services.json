@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "140108120339",
+    "project_id": "fir-authentication-32fea",
+    "storage_bucket": "fir-authentication-32fea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140108120339:android:19804d136b9081bc799ae6",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_final_apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140108120339-8mmuv8f69ev0cb5kgc9not60i2bv9vif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH4Qh0I6hjUTs_B1fR0rZpL1ZEynxgYqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140108120339-8mmuv8f69ev0cb5kgc9not60i2bv9vif.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "140108120339-25netbtn338t658cj3agd3h3heb9jgor.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.proyectoFinalApps"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
