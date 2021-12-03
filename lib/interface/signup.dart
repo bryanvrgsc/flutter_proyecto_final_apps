@@ -1,4 +1,4 @@
-import 'package:proyecto_final_apps/navigationDrawer.dart';
+import 'package:proyecto_final_apps/routes/navigationDrawer.dart';
 import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +73,6 @@ class _SignupPageState extends State<SignupPage> {
                   )),
               ),
               const SizedBox(height: 15.0),
-              
               RaisedButton(
                 child: Text("Registrarse"),
                 onPressed: () async {

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_final_apps/routes/navigationDrawer.dart';
-
-class ExitPage extends StatelessWidget {
+  
+class FeedbackPage extends StatelessWidget {
   static const String nombreruta = '/feedback';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Exit'),
+        title: Text('Feedback'),
       ),
       drawer: navigationDrawer(),
       body: Center(
-        child: Text("Soy exit"),
+        child: Text("Soy feedback"),
       ));
   }
 }

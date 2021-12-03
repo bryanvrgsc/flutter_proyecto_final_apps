@@ -29,7 +29,13 @@ class navigationDrawer extends StatelessWidget {
             icon: Icons.feedback,
             text: 'Feedback',
             myonTap: () =>
-              Navigator.pushReplacementNamed(context, rutas.rutafeedback))
+              Navigator.pushReplacementNamed(context, rutas.rutafeedback)),
+        SizedBox(height: 300),
+        createDrawerBodyItem(
+            icon: Icons.exit_to_app,
+            text: 'Salir',
+            myonTap: () =>
+              Navigator.pushReplacementNamed(context, rutas.rutaexit))
       ],
     ));
   }
