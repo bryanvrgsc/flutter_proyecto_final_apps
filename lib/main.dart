@@ -9,7 +9,6 @@ import 'package:proyecto_final_apps/interface/login.dart';
 import 'package:proyecto_final_apps/interface/signup.dart';
 import 'package:proyecto_final_apps/interface/contacto.dart';
 import 'package:proyecto_final_apps/interface/feedback.dart';
-import 'package:proyecto_final_apps/interface/exit.dart';
 
 import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
@@ -32,8 +31,7 @@ class MyApp extends StatelessWidget {
         rutas.rutalogin: (context) => MainScreen(),
         rutas.rutasignup: (context) => SignupPage(),
         rutas.rutacontacto: (context) => ContactPage(),
-        rutas.rutafeedback: (context) => FeedbackPage(),
-        rutas.rutaexit: (context) => ExitPage()
+        rutas.rutafeedback: (context) => FeedbackPage()
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,

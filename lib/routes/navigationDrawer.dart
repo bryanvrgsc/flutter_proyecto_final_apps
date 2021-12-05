@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'rutas.dart';
 import 'createDrawerBodyItem.dart';
@@ -35,7 +36,8 @@ class navigationDrawer extends StatelessWidget {
             icon: Icons.exit_to_app,
             text: 'Salir',
             myonTap: () =>
-              Navigator.pushReplacementNamed(context, rutas.rutaexit))
+              exit(0)
+        )
       ],
     ));
   }
