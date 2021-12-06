@@ -3,7 +3,6 @@ import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 class SignupPage extends StatefulWidget {
   static const String nombreruta = '/signup';
   @override

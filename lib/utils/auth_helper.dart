@@ -53,6 +53,5 @@ class UserHelper {
     } else {
       await _db.collection("users").doc(user.uid).set(userData);
     }
-    
   }
 }
