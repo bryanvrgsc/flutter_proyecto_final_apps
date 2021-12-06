@@ -1,8 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:proyecto_final_apps/interface/home_admin.dart';
-import 'package:proyecto_final_apps/interface/home_user.dart';
+
+import 'package:proyecto_final_apps/interface/admin/home_admin.dart';
+import 'package:proyecto_final_apps/interface/admin/cita_admin.dart';
+import 'package:proyecto_final_apps/interface/admin/scan_qr.dart';
+
 
 import 'package:proyecto_final_apps/routes/rutas.dart';
 import 'package:proyecto_final_apps/interface/login.dart';
@@ -10,10 +13,11 @@ import 'package:proyecto_final_apps/interface/signup.dart';
 import 'package:proyecto_final_apps/interface/contacto.dart';
 import 'package:proyecto_final_apps/interface/feedback.dart';
 
-import 'package:proyecto_final_apps/interface/contactouser.dart';
-import 'package:proyecto_final_apps/interface/feedbackuser.dart';
-import 'package:proyecto_final_apps/interface/crear_cita_user.dart';
-import 'package:proyecto_final_apps/interface/qr_user.dart';
+import 'package:proyecto_final_apps/interface/user/home_user.dart';
+import 'package:proyecto_final_apps/interface/user/contactouser.dart';
+import 'package:proyecto_final_apps/interface/user/feedbackuser.dart';
+import 'package:proyecto_final_apps/interface/user/crear_cita_user.dart';
+import 'package:proyecto_final_apps/interface/user/qr_user.dart';
 
 import 'package:proyecto_final_apps/utils/auth_helper.dart';
 import 'package:flutter/material.dart';
@@ -33,16 +37,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       home: MainScreen(),
       routes: {
-        rutas.rutahomeuser: (context) => HomePage(),
         rutas.rutalogin: (context) => MainScreen(),
         rutas.rutasignup: (context) => SignupPage(),
         rutas.rutacontacto: (context) => ContactPage(),
         rutas.rutafeedback: (context) => FeedbackPage(),
         
+        rutas.rutahomeuser: (context) => HomePage(),
         rutas.rutacontactouser: (context) => ContactUserPage(),
         rutas.rutafeedbackuser: (context) => FeedbackUserPage(),
         rutas.rutacitauser: (context) => CitaUserPage(),
-        rutas.rutaqruser: (context) => QRUserPage()
+        rutas.rutaqruser: (context) => QRUserPage(),
+
+        rutas.rutahomeadmin: (context) => HomeAdminPage(),
+        rutas.rutacitaadmin: (context) => CitaAdminPage(),
+        rutas.rutascanadmin: (context) => ScanAdminPage()
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -70,7 +78,7 @@ class MainScreen extends StatelessWidget {
                   Map<String, dynamic> user =
                       snapshot.data!.data() as Map<String, dynamic>;
                   if (user['role'] == 'admin') {
-                    return AdminHomePage();
+                    return HomeAdminPage();
                   } else {
                     return HomePage();
                   }
