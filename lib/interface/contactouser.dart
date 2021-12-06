@@ -1,16 +1,16 @@
-import 'package:proyecto_final_apps/routes/navigationDrawer.dart';
+import 'package:proyecto_final_apps/routes/navigationDrawerUser.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_sms/flutter_sms.dart';
 import 'dart:io';
 
-class ContactPage extends StatefulWidget {
-  static const String nombreruta = '/contacto';
+class ContactUserPage extends StatefulWidget {
+  static const String nombreruta = '/contactouser';
   @override
-  _ContactPageState createState() => _ContactPageState();
+  _ContactUserPageState createState() => _ContactUserPageState();
 }
 
-class _ContactPageState extends State<ContactPage> {
+class _ContactUserPageState extends State<ContactUserPage> {
   hacerllamada() async {
     const url = 'tel:+525512345678';
     if (await canLaunch(url)) {
@@ -52,6 +52,7 @@ class _ContactPageState extends State<ContactPage> {
   }
 
 
+
   @override
   Widget build(BuildContext context) {
     double fontsizebuttons = 35;
@@ -60,7 +61,7 @@ class _ContactPageState extends State<ContactPage> {
         title: Text('Contacto'),
         backgroundColor: Colors.black
       ),
-      drawer: navigationDrawer(),
+      drawer: navigationDrawerUser(),
         body: Center(
             child: IntrinsicWidth(
                 child: Column(
@@ -104,7 +105,6 @@ class _ContactPageState extends State<ContactPage> {
                     textStyle:
                         TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
               ),
-              
             ]))));
   }
 }

@@ -1,14 +1,14 @@
-import 'package:proyecto_final_apps/routes/navigationDrawer.dart';
+import 'package:proyecto_final_apps/routes/navigationDrawerUser.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class FeedbackPage extends StatefulWidget {
-  static const String nombreruta = '/feedback';
+class FeedbackUserPage extends StatefulWidget {
+  static const String nombreruta = '/feedbackuser';
   @override
-  _FeedbackPageState createState() => _FeedbackPageState();
+  _FeedbackUserPageState createState() => _FeedbackUserPageState();
 }
 
-class _FeedbackPageState extends State<FeedbackPage> {
+class _FeedbackUserPageState extends State<FeedbackUserPage> {
   late TextEditingController _nombreController;
   late TextEditingController _emailController;
   late TextEditingController _telefonoController;
@@ -30,7 +30,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
         title: Text('Feedback'),
         backgroundColor: Colors.black
       ),
-      drawer: navigationDrawer(),
+      drawer: navigationDrawerUser(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

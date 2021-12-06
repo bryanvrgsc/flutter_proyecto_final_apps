@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:proyecto_final_apps/interface/signup.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:device_info/device_info.dart';

@@ -12,28 +12,28 @@ class navigationDrawer extends StatelessWidget {
       children: <Widget>[
         SizedBox(height: 60),
         createDrawerBodyItem(
-            icon: Icons.login,
+            icon: Icons.login_rounded,
             text: 'Login',
             myonTap: () =>
               Navigator.pushReplacementNamed(context, rutas.rutalogin)),
         createDrawerBodyItem(
-            icon: Icons.person_add,
+            icon: Icons.person_add_rounded,
             text: 'Crear Usuario',
             myonTap: () =>
               Navigator.pushReplacementNamed(context, rutas.rutasignup)),
         createDrawerBodyItem(
-            icon: Icons.contact_page,
+            icon: Icons.contact_page_rounded,
             text: 'Contactanos',
             myonTap: () =>
               Navigator.pushReplacementNamed(context, rutas.rutacontacto)),
         createDrawerBodyItem(
-            icon: Icons.feedback,
+            icon: Icons.feedback_rounded,
             text: 'Feedback',
             myonTap: () =>
               Navigator.pushReplacementNamed(context, rutas.rutafeedback)),
         SizedBox(height: 300),
         createDrawerBodyItem(
-            icon: Icons.exit_to_app,
+            icon: Icons.exit_to_app_rounded,
             text: 'Salir',
             myonTap: () =>
               exit(0)
