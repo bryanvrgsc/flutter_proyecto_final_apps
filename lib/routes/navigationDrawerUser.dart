@@ -17,16 +17,16 @@ class navigationDrawerUser extends StatelessWidget {
             text: 'Home',
             myonTap: () =>
                 Navigator.pushReplacementNamed(context, rutas.rutahomeuser)),
-        createDrawerBodyItem(
-            icon: Icons.date_range_rounded,
-            text: 'Crear cita',
-            myonTap: () =>
-                Navigator.pushReplacementNamed(context, rutas.rutacitauser)),
-        createDrawerBodyItem(
-            icon: Icons.qr_code,
-            text: 'Mostrar QR',
-            myonTap: () =>
-                Navigator.pushReplacementNamed(context, rutas.rutaqruser)),
+        // createDrawerBodyItem(
+        //     icon: Icons.date_range_rounded,
+        //     text: 'Crear cita',
+        //     myonTap: () =>
+        //         Navigator.pushReplacementNamed(context, rutas.rutacitauser)),
+        // createDrawerBodyItem(
+        //     icon: Icons.qr_code,
+        //     text: 'Mostrar QR',
+        //     myonTap: () =>
+        //         Navigator.pushReplacementNamed(context, rutas.rutaqruser)),
         createDrawerBodyItem(
             icon: Icons.contact_page_rounded,
             text: 'Contactanos',

@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const SizedBox(height: 150.0),
-              Text("Inicio de Sesión",
+              Text("Credencial",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
               ),
               const SizedBox(height: 20.0),
