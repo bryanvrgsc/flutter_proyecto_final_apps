@@ -17,16 +17,16 @@ class navigationDrawerAdmin extends StatelessWidget {
             text: 'Home Admin',
             myonTap: () =>
                 Navigator.pushReplacementNamed(context, rutas.rutahomeadmin)),
-        createDrawerBodyItem(
-            icon: Icons.date_range_rounded,
-            text: 'Ver citas',
-            myonTap: () =>
-                Navigator.pushReplacementNamed(context, rutas.rutacitaadmin)),
-        createDrawerBodyItem(
-            icon: Icons.qr_code,
-            text: 'Escanear QR',
-            myonTap: () =>
-                Navigator.pushReplacementNamed(context, rutas.rutascanadmin)),
+        // createDrawerBodyItem(
+        //     icon: Icons.date_range_rounded,
+        //     text: 'Ver citas',
+        //     myonTap: () =>
+        //         Navigator.pushReplacementNamed(context, rutas.rutacitaadmin)),
+        // createDrawerBodyItem(
+        //     icon: Icons.qr_code,
+        //     text: 'Escanear QR',
+        //     myonTap: () =>
+        //         Navigator.pushReplacementNamed(context, rutas.rutascanadmin)),
         createDrawerBodyItem(
             icon: Icons.logout_rounded,
             text: 'Cerrar Sesión',
