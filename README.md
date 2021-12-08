@@ -3,6 +3,7 @@
 ## Getting Started
 
 Esta conectada a Firebase
+
 Funciona en Android y IOS
 
 ## Video
