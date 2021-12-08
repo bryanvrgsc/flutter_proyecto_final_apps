@@ -6,6 +6,9 @@ Esta conectada a Firebase
 
 Funciona en Android y IOS
 
+Video
+https://drive.google.com/file/d/1VYnOJINVIiF5S1bowKk9b6_3pj_YH1JV/view?usp=sharing
+
 ## Screenshots de la App
 
 ![alt text](https://i.postimg.cc/W1mN3nRr/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-02.png)
