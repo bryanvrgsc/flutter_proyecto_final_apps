@@ -1,16 +1,24 @@
 # Proyecto Final Apps
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Esta conectada a Firebase
 
-A few resources to get you started if this is your first Flutter project:
+Funciona en Android y IOS
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Screenshots de la App
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](https://i.postimg.cc/W1mN3nRr/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-02.png)
+
+![alt text](https://i.postimg.cc/FKDhbHHH/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-09.png)
+
+![alt text](https://i.postimg.cc/tTJpBGst/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-12.png)
+
+![alt text](https://i.postimg.cc/ZRQZgs3k/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-15.png)
+
+![alt text](https://i.postimg.cc/zXKbCTZD/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-38.png)
+
+![alt text](https://i.postimg.cc/MpYn4xph/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-56.png)
+
+![alt text](https://i.postimg.cc/W4WhNnr8/Simulator-Screen-Shot-i-Phone-12-2021-12-07-at-19-01-59.png)
+
