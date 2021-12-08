@@ -3,10 +3,10 @@
 ## Getting Started
 
 Esta conectada a Firebase
-
 Funciona en Android y IOS
 
-Video
+## Video
+
 https://drive.google.com/file/d/1VYnOJINVIiF5S1bowKk9b6_3pj_YH1JV/view?usp=sharing
 
 ## Screenshots de la App
